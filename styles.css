@@ -203,12 +203,21 @@ p { margin: 0; }
 .hero-media { position: relative; overflow: hidden; }
 .hero-media img {
   position: absolute; inset: 0; width: 100%; height: 100%;
-  object-fit: cover; object-position: 30% center;
+  object-fit: cover; object-position: var(--focus, center 45%);
+  opacity: 0; transform: scale(1.06);
+  transition: opacity 1.4s ease, transform 7s ease-out;
 }
+/* crossfade with a slow, subtle zoom-out on the visible photo */
+.hero-media img.is-active { opacity: 1; transform: scale(1); }
 .hero-media::before {
   /* soft blend from the paper background into the photo */
   content: ""; position: absolute; inset: 0 auto 0 0; width: 34%; z-index: 1;
   background: linear-gradient(90deg, var(--paper), rgba(248, 249, 246, 0));
+}
+.hero-media::after {
+  /* keeps the nav readable over any photo */
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 150px; z-index: 1;
+  background: linear-gradient(180deg, rgba(248, 249, 246, .85), rgba(248, 249, 246, 0));
 }
 
 /* ---------- Sections ---------- */
@@ -380,7 +389,6 @@ a.contact-line:hover .contact-value { color: var(--green); }
 
   .hero { grid-template-columns: 1fr; min-height: 0; }
   .hero-media { order: -1; height: 300px; margin-top: var(--header-h); }
-  .hero-media img { object-position: center 40%; }
   .hero-media::before { inset: auto 0 0 0; width: auto; height: 45%;
     background: linear-gradient(0deg, var(--paper), rgba(248, 249, 246, 0)); }
   .hero-text { padding: 8px var(--gutter) 56px; justify-content: flex-start; }

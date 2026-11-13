@@ -79,6 +79,32 @@
     start();
   }
 
+  // Hero photos: crossfade on their own timer; the slider's pause button stops them too
+  const media = document.querySelector(".hero-media");
+  const photos = media ? media.querySelectorAll("img") : [];
+  if (photos.length > 1 && !reduceMotion) {
+    const pauseBtn = document.querySelector(".slider-pause");
+    const interval = Number(media.dataset.interval) || 5500;
+    let current = 0;
+    let timer = null;
+
+    const next = () => {
+      photos[current].classList.remove("is-active");
+      current = (current + 1) % photos.length;
+      photos[current].classList.add("is-active");
+    };
+    const stop = () => { clearInterval(timer); timer = null; };
+    const start = () => {
+      stop();
+      if (pauseBtn && pauseBtn.dataset.paused === "true") return;
+      timer = setInterval(next, interval);
+    };
+
+    if (pauseBtn) pauseBtn.addEventListener("click", start);
+    document.addEventListener("visibilitychange", () => (document.hidden ? stop() : start()));
+    start();
+  }
+
   // Gentle reveal of content blocks as they scroll into view
   if (!reduceMotion && "IntersectionObserver" in window) {
     const targets = document.querySelectorAll(
