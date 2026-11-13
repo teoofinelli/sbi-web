@@ -72,6 +72,9 @@ p { margin: 0; }
 .site-header {
   position: fixed; inset: 0 0 auto 0; z-index: 50;
   height: var(--header-h);
+  background: rgba(248, 249, 246, .55);
+  backdrop-filter: saturate(160%) blur(8px);
+  -webkit-backdrop-filter: saturate(160%) blur(8px);
   transition: background .3s, box-shadow .3s;
 }
 .site-header.is-scrolled {
@@ -204,20 +207,17 @@ p { margin: 0; }
 .hero-media img {
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; object-position: var(--focus, center 45%);
-  opacity: 0; transform: scale(1.06);
-  transition: opacity 1.4s ease, transform 7s ease-out;
+  /* scale is enough to cover the offset, so no empty edge shows while sliding */
+  opacity: 0; transform: translateX(4%) scale(1.09);
+  transition: opacity .9s ease, transform 1.1s cubic-bezier(.22, .61, .36, 1);
 }
-/* crossfade with a slow, subtle zoom-out on the visible photo */
-.hero-media img.is-active { opacity: 1; transform: scale(1); }
+/* incoming photo slides in from the right; the outgoing one drifts left and fades */
+.hero-media img.is-active { opacity: 1; transform: none; z-index: 0; }
+.hero-media img.is-leaving { opacity: 0; transform: translateX(-6%) scale(1.02); }
 .hero-media::before {
-  /* soft blend from the paper background into the photo */
-  content: ""; position: absolute; inset: 0 auto 0 0; width: 34%; z-index: 1;
+  /* thin blend from the paper background into the photo */
+  content: ""; position: absolute; inset: 0 auto 0 0; width: 8%; z-index: 1;
   background: linear-gradient(90deg, var(--paper), rgba(248, 249, 246, 0));
-}
-.hero-media::after {
-  /* keeps the nav readable over any photo */
-  content: ""; position: absolute; inset: 0 0 auto 0; height: 150px; z-index: 1;
-  background: linear-gradient(180deg, rgba(248, 249, 246, .85), rgba(248, 249, 246, 0));
 }
 
 /* ---------- Sections ---------- */
@@ -389,7 +389,7 @@ a.contact-line:hover .contact-value { color: var(--green); }
 
   .hero { grid-template-columns: 1fr; min-height: 0; }
   .hero-media { order: -1; height: 300px; margin-top: var(--header-h); }
-  .hero-media::before { inset: auto 0 0 0; width: auto; height: 45%;
+  .hero-media::before { inset: auto 0 0 0; width: auto; height: 12%;
     background: linear-gradient(0deg, var(--paper), rgba(248, 249, 246, 0)); }
   .hero-text { padding: 8px var(--gutter) 56px; justify-content: flex-start; }
   .hero-inner { max-width: none; }

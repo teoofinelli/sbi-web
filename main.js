@@ -84,12 +84,13 @@
   const photos = media ? media.querySelectorAll("img") : [];
   if (photos.length > 1 && !reduceMotion) {
     const pauseBtn = document.querySelector(".slider-pause");
-    const interval = Number(media.dataset.interval) || 5500;
+    const interval = Number(media.dataset.interval) || 3500;
     let current = 0;
     let timer = null;
 
     const next = () => {
-      photos[current].classList.remove("is-active");
+      photos.forEach((p) => p.classList.remove("is-leaving"));
+      photos[current].classList.replace("is-active", "is-leaving");
       current = (current + 1) % photos.length;
       photos[current].classList.add("is-active");
     };
