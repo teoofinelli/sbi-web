@@ -170,7 +170,7 @@ p { margin: 0; }
 }
 /* the incoming slide waits for the outgoing one to fade, so texts never overlap */
 .slide.is-active { opacity: 1; transform: none; pointer-events: auto; transition: opacity .6s ease .3s, transform .6s ease .3s; }
-.slide-lead { font-size: clamp(17px, 1.5vw, 19px); color: var(--slate); max-width: 34em; }
+.slide-lead { font-size: clamp(17px, 1.5vw, 19px); font-weight: 500; color: var(--green); max-width: 34em; }
 
 .slider-controls { display: flex; align-items: center; gap: 12px; margin-top: 18px; }
 .slider-tabs { display: flex; gap: 8px; flex: 1; }
@@ -207,7 +207,7 @@ p { margin: 0; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
 
 .hero-media { position: relative; overflow: hidden; }
-.hero-media img {
+.hero-media > * {
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; object-position: var(--focus, center 45%);
   /* scale is enough to cover the offset, so no empty edge shows while sliding */
@@ -215,8 +215,13 @@ p { margin: 0; }
   transition: opacity .9s ease, transform 1.1s cubic-bezier(.22, .61, .36, 1);
 }
 /* incoming photo slides in from the right; the outgoing one drifts left and fades */
-.hero-media img.is-active { opacity: 1; transform: none; z-index: 0; }
-.hero-media img.is-leaving { opacity: 0; transform: translateX(-6%) scale(1.02); }
+.hero-media > .is-active { opacity: 1; transform: none; z-index: 0; }
+.hero-media > .is-leaving { opacity: 0; transform: translateX(-6%) scale(1.02); }
+/* a wide photo shown whole, over a blurred copy of itself that fills the panel */
+.hero-fit { overflow: hidden; }
+.hero-fit img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-fit .fit-bg { object-fit: cover; transform: scale(1.15); filter: blur(22px) saturate(1.1) brightness(.9); }
+.hero-fit .fit-main { object-fit: contain; }
 .hero-media::before {
   /* thin blend from the paper background into the photo */
   content: ""; position: absolute; inset: 0 auto 0 0; width: 8%; z-index: 1;

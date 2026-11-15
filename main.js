@@ -81,7 +81,7 @@
 
   // Hero photos: crossfade on their own timer; the slider's pause button stops them too
   const media = document.querySelector(".hero-media");
-  const photos = media ? media.querySelectorAll("img") : [];
+  const photos = media ? [...media.children] : [];
   if (photos.length > 1 && !reduceMotion) {
     const pauseBtn = document.querySelector(".slider-pause");
     const interval = Number(media.dataset.interval) || 3500;
