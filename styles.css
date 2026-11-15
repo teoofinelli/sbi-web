@@ -141,9 +141,9 @@ p { margin: 0; }
 }
 
 .hero-title {
-  font-size: clamp(96px, 15vw, 188px);
+  font-size: clamp(72px, 10vw, 136px);
   font-weight: 800; letter-spacing: -0.05em; line-height: .9;
-  margin: 14px 0 22px -0.04em;
+  margin: 14px 0 20px -0.04em;
 }
 .hero-rule { display: flex; align-items: center; gap: 0; width: 100%; max-width: 420px; margin-bottom: 20px; }
 .hero-rule::before, .hero-rule::after { content: ""; height: 1.5px; flex: 1; }
@@ -152,9 +152,12 @@ p { margin: 0; }
 .hero-rule span { width: 10px; height: 10px; border-radius: 50%; background: var(--green); margin: 0 8px; }
 
 .hero-tagline {
-  font-family: var(--font-display); font-weight: 700; color: var(--navy);
-  font-size: clamp(19px, 2vw, 24px); letter-spacing: -0.01em;
+  font-family: var(--font-display); font-weight: 800; color: var(--navy);
+  font-size: clamp(26px, 3vw, 38px); line-height: 1.15; letter-spacing: -0.025em;
+  max-width: 15em;
 }
+.hero-tagline .accent { color: var(--green); }
+.nowrap { white-space: nowrap; }
 
 /* Slider */
 .slider { margin-top: 18px; }
@@ -411,4 +414,32 @@ a.contact-line:hover .contact-value { color: var(--green); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0s !important; animation: none !important; }
   .reveal { opacity: 1; transform: none; }
+}
+
+/* ---------- Who we are ---------- */
+.about { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(32px, 6vw, 80px); align-items: start; }
+.about-head { margin-bottom: 0; }
+.about-body { display: grid; gap: 18px; color: var(--slate); font-size: clamp(16.5px, 1.4vw, 18px); padding-top: 34px; }
+.facts {
+  list-style: none; margin: clamp(48px, 7vw, 72px) 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+.facts li {
+  background: var(--white); border: 1px solid var(--mist); border-radius: var(--radius);
+  padding: 26px 28px; display: grid; gap: 6px;
+}
+.fact-value { font: 800 clamp(30px, 3.4vw, 42px)/1 var(--font-display); color: var(--navy); letter-spacing: -0.03em; }
+.fact-label { color: var(--slate); font-size: 15.5px; }
+.facts li:nth-child(2) .fact-value { color: var(--green); }
+
+/* ---------- Phones with flags ---------- */
+.phone { display: flex; align-items: center; gap: 12px; text-decoration: none; padding-top: 6px; }
+.phone + .phone { padding-top: 8px; }
+.phone:hover .contact-value { color: var(--green); }
+.flag { width: 24px; height: 16px; flex: none; border-radius: 3px; box-shadow: 0 0 0 1px rgba(15, 35, 67, .12); }
+
+@media (max-width: 860px) {
+  .about { grid-template-columns: 1fr; gap: 0; }
+  .about-body { padding-top: 22px; }
+  .facts { grid-template-columns: 1fr; }
 }

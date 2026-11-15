@@ -109,7 +109,7 @@
   // Gentle reveal of content blocks as they scroll into view
   if (!reduceMotion && "IntersectionObserver" in window) {
     const targets = document.querySelectorAll(
-      ".section-head, .pillar, .statement, .step, .criterion, .filters, .attributes li, .contact-card"
+      ".section-head, .about-body, .facts li, .pillar, .statement, .step, .criterion, .filters, .attributes li, .contact-card"
     );
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
