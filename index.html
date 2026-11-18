@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=7">
 
   <!-- Analytics: paste the tracking snippet (e.g. Plausible or Google Analytics) here once the domain is live. -->
 </head>
@@ -30,18 +30,22 @@
         <span class="brand-mark">SBI</span>
         <span class="brand-dot" aria-hidden="true"></span>
       </a>
+      <nav class="site-nav" id="site-nav">
+        <a href="#who-we-are" data-i18n="nav.who">Who we are</a>
+        <a href="#what-we-do" data-i18n="nav.what">What we do</a>
+        <a href="#approach" data-i18n="nav.approach">Our approach</a>
+        <a href="#what-we-look-for" data-i18n="nav.lookfor">What we look for</a>
+        <a href="#how-we-think" data-i18n="nav.think">How we think</a>
+        <a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language / Idioma">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      </div>
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
         <span class="sr-only">Menu</span>
         <span class="nav-toggle-bar"></span>
       </button>
-      <nav class="site-nav" id="site-nav">
-        <a href="#who-we-are">Who we are</a>
-        <a href="#what-we-do">What we do</a>
-        <a href="#approach">Our approach</a>
-        <a href="#what-we-look-for">What we look for</a>
-        <a href="#how-we-think">How we think</a>
-        <a href="#contact" class="nav-cta">Contact</a>
-      </nav>
     </div>
   </header>
 
@@ -51,30 +55,30 @@
     <section class="hero" aria-label="Introduction">
       <div class="hero-text">
         <div class="hero-inner">
-          <p class="eyebrow"><span class="nowrap">Ag-Biotech</span> · From Europe to <span class="nowrap">Latin America</span></p>
+          <p class="eyebrow" data-i18n="hero.eyebrow"><span class="nowrap">Ag Bio Tech</span> · From the world to <span class="nowrap">Latin America</span></p>
           <h1 class="hero-title">SBI</h1>
           <div class="hero-rule" aria-hidden="true"><span></span></div>
-          <p class="hero-tagline"><span class="nowrap">Global Technology.</span> <span class="nowrap accent">Local Intelligence.</span> <span class="nowrap">Regional Growth.</span></p>
+          <p class="hero-tagline" data-i18n="hero.tagline"><span class="nowrap">Global Technology.</span> <span class="nowrap accent">Local Intelligence.</span> <span class="nowrap">Regional Growth.</span></p>
 
           <!-- Rotating messages. The first slide works on its own if the visitor never waits for the rotation. -->
           <div class="slider" data-interval="6500" aria-roledescription="carousel" aria-label="What SBI does">
             <div class="slides" aria-live="polite">
               <div class="slide is-active" data-index="0" role="group" aria-roledescription="slide" aria-label="1 of 3">
-                <p class="slide-lead">Connecting global agricultural innovation with real market opportunities.</p>
+                <p class="slide-lead" data-i18n="hero.slide1">Connecting global agricultural innovation with real market opportunities.</p>
               </div>
               <div class="slide" data-index="1" role="group" aria-roledescription="slide" aria-label="2 of 3">
-                <p class="slide-lead">From Europe, we scout <span class="nowrap">Ag-Biotech</span> solutions worldwide that close the gaps current options leave open.</p>
+                <p class="slide-lead" data-i18n="hero.slide2">From Europe, we scout <span class="nowrap">Ag-Biotech</span> solutions worldwide that close the gaps current options leave open.</p>
               </div>
               <div class="slide" data-index="2" role="group" aria-roledescription="slide" aria-label="3 of 3">
-                <p class="slide-lead">We turn innovation into viable business and sustainable growth across Latin America.</p>
+                <p class="slide-lead" data-i18n="hero.slide3">We turn innovation into viable business and sustainable growth across Latin America.</p>
               </div>
             </div>
 
             <div class="slider-controls">
               <div class="slider-tabs" role="tablist" aria-label="Choose a message">
-                <button class="slider-tab is-active" role="tab" aria-selected="true" data-go="0"><span class="tab-num">01</span> Market intelligence<span class="tab-progress"></span></button>
-                <button class="slider-tab" role="tab" aria-selected="false" data-go="1"><span class="tab-num">02</span> Technology scouting<span class="tab-progress"></span></button>
-                <button class="slider-tab" role="tab" aria-selected="false" data-go="2"><span class="tab-num">03</span> Market development<span class="tab-progress"></span></button>
+                <button class="slider-tab is-active" role="tab" aria-selected="true" data-go="0" data-i18n="hero.tab1"><span class="tab-num">01</span> Market intelligence<span class="tab-progress"></span></button>
+                <button class="slider-tab" role="tab" aria-selected="false" data-go="1" data-i18n="hero.tab2"><span class="tab-num">02</span> Technology scouting<span class="tab-progress"></span></button>
+                <button class="slider-tab" role="tab" aria-selected="false" data-go="2" data-i18n="hero.tab3"><span class="tab-num">03</span> Market development<span class="tab-progress"></span></button>
               </div>
               <button class="slider-pause" aria-label="Pause rotation" data-paused="false">
                 <svg viewBox="0 0 16 16" aria-hidden="true" class="icon-pause"><rect x="4" y="3" width="2.5" height="10" rx="1"/><rect x="9.5" y="3" width="2.5" height="10" rx="1"/></svg>
@@ -84,8 +88,8 @@
           </div>
 
           <div class="hero-actions">
-            <a href="#approach" class="btn btn-primary">See our approach</a>
-            <a href="#contact" class="btn btn-ghost">Start a conversation</a>
+            <a href="#approach" class="btn btn-primary" data-i18n="hero.cta1">See our approach</a>
+            <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta2">Start a conversation</a>
           </div>
         </div>
       </div>
@@ -93,7 +97,7 @@
       <div class="hero-media" aria-hidden="true" data-interval="3500">
         <img class="is-active" src="assets/hero-1-soy.jpg" alt="" width="1000" height="1776" fetchpriority="high">
         <img src="assets/hero-2-corn.jpg" alt="" width="1000" height="1776" style="--focus: center 55%">
-        <img src="assets/hero-3-field.jpg" alt="" width="1000" height="1778" style="--focus: center 60%">
+        <img src="assets/hero-3-wheat.jpg" alt="" width="537" height="892" style="--focus: center 55%">
         <img src="assets/hero-4-harvest.jpg" alt="" width="1000" height="1778" style="--focus: center 50%">
         <!-- Wide photo: on desktop a 2x2 grid of its four fruits that adapts to any panel shape; the original on mobile -->
         <div class="produce">
@@ -113,33 +117,33 @@
       <div class="container">
         <div class="about">
           <div class="section-head about-head">
-            <p class="kicker">01 — Who we are</p>
-            <h2>Agronomists and agribusiness specialists with 25+ years in Latin America.</h2>
+            <p class="kicker" data-i18n="who.kicker">01 — Who we are</p>
+            <h2 data-i18n="who.title">Agronomists and agribusiness specialists with 25+ years in Latin America.</h2>
           </div>
           <div class="about-body">
-            <p>We are a team of agronomists and professionals specialised in agribusiness, market development and technology launches, with more than 25 years of experience in Latin America.</p>
-            <p>We combine agronomic knowledge, strategic vision and commercial experience to connect global innovation with the real needs of Latin American agriculture.</p>
-            <p>With a presence in Europe and a solid network of knowledge, relationships and local capabilities in Latin America's main markets, we bring together a global perspective and a deep understanding of each market — its production, commercial and regulatory particularities.</p>
+            <p data-i18n="who.p1">We are a team of agronomists and professionals specialised in agribusiness, market development and technology launches, with more than 25 years of experience in Latin America.</p>
+            <p data-i18n="who.p2">We combine agronomic knowledge, strategic vision and commercial experience to connect global innovation with the real needs of Latin American agriculture.</p>
+            <p data-i18n="who.p3">With a presence in Europe and a solid network of knowledge, relationships and local capabilities in Latin America's main markets, we bring together a global perspective and a deep understanding of each market — its production, commercial and regulatory particularities.</p>
           </div>
         </div>
 
         <ul class="facts">
           <li>
             <span class="fact-value">25+</span>
-            <span class="fact-label">years of experience in Latin American agriculture</span>
+            <span class="fact-label" data-i18n="who.fact1">years of experience in Latin American agriculture</span>
           </li>
           <li>
-            <span class="fact-value">Europe</span>
-            <span class="fact-label">our base for scouting <span class="nowrap">Ag-Biotech</span> innovation</span>
+            <span class="fact-value" data-i18n="who.fact2v">Europe</span>
+            <span class="fact-label" data-i18n="who.fact2">our base for scouting <span class="nowrap">Ag-Biotech</span> innovation</span>
           </li>
           <li>
             <span class="fact-value">LatAm</span>
-            <span class="fact-label">a local network across the region's main markets</span>
+            <span class="fact-label" data-i18n="who.fact3">a local network across the region's main markets</span>
           </li>
         </ul>
 
         <blockquote class="statement">
-          <p>We connect knowledge, technology and market <strong>to turn innovation into solutions with impact and sustainable growth for Latin American agriculture.</strong></p>
+          <p data-i18n="who.statement">We connect knowledge, technology and market <strong>to turn innovation into solutions with impact and sustainable growth for Latin American agriculture.</strong></p>
         </blockquote>
       </div>
     </section>
@@ -148,31 +152,31 @@
     <section class="section section-tint" id="what-we-do">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">02 — What we do</p>
-          <h2>From Europe, we scout the <span class="nowrap">Ag-Biotech</span> that Latin American agriculture needs.</h2>
-          <p class="lede">We identify opportunities where technological innovation can make a real difference. We explore solutions globally, assess their agronomic and commercial potential, and bring together the technical, regulatory and operational capabilities needed to adapt, validate and develop them in regional markets.</p>
+          <p class="kicker" data-i18n="what.kicker">02 — What we do</p>
+          <h2 data-i18n="what.title">From Europe, we scout the <span class="nowrap">Ag-Biotech</span> that Latin American agriculture needs.</h2>
+          <p class="lede" data-i18n="what.lede">We identify opportunities where technological innovation can make a real difference. We explore solutions globally, assess their agronomic and commercial potential, and bring together the technical, regulatory and operational capabilities needed to adapt, validate and develop them in regional markets.</p>
         </div>
 
         <div class="pillars">
           <article class="pillar">
             <span class="pillar-num">A</span>
-            <h3>We start from the problem</h3>
-            <p>We identify real needs, the limits of today's solutions and the opportunities they open for growers and agri-food chains.</p>
+            <h3 data-i18n="what.a.title">We start from the problem</h3>
+            <p data-i18n="what.a.text">We identify real needs, the limits of today's solutions and the opportunities they open for growers and agri-food chains.</p>
           </article>
           <article class="pillar">
             <span class="pillar-num">B</span>
-            <h3>We find the technology</h3>
-            <p>From our base in Europe, we search worldwide for <span class="nowrap">Ag-Biotech</span> technologies, innovations and partners that respond to those needs.</p>
+            <h3 data-i18n="what.b.title">We find the technology</h3>
+            <p data-i18n="what.b.text">From our base in Europe, we search worldwide for <span class="nowrap">Ag-Biotech</span> technologies, innovations and partners that respond to those needs.</p>
           </article>
           <article class="pillar">
             <span class="pillar-num">C</span>
-            <h3>We take it to market</h3>
-            <p>We assess local fit, evidence, scalability, regulation and time to market, and help build the path to commercial entry.</p>
+            <h3 data-i18n="what.c.title">We take it to market</h3>
+            <p data-i18n="what.c.text">We assess local fit, evidence, scalability, regulation and time to market, and help build the path to commercial entry.</p>
           </article>
         </div>
 
         <blockquote class="statement">
-          <p>We are not a distributor or a catalogue. <strong>We first find where the gap is — then the technology it needs.</strong></p>
+          <p data-i18n="what.statement">We are not a distributor or a catalogue. <strong>We first find where the gap is — then the technology it needs.</strong></p>
         </blockquote>
       </div>
     </section>
@@ -181,36 +185,36 @@
     <section class="section" id="approach">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">03 — Our approach</p>
-          <h2>We start with the problem, not with a product to sell.</h2>
-          <p class="lede">Five stages take an opportunity from a real need in the field to a viable commercial solution.</p>
+          <p class="kicker" data-i18n="approach.kicker">03 — Our approach</p>
+          <h2 data-i18n="approach.title">We start with the problem, not with a product to sell.</h2>
+          <p class="lede" data-i18n="approach.lede">Five stages take an opportunity from a real need in the field to a viable commercial solution.</p>
         </div>
 
         <ol class="process">
           <li class="step">
             <span class="step-num">01</span>
-            <h3>Real Needs</h3>
-            <p>Understand the problems and demands of agriculture, crop by crop and market by market.</p>
+            <h3 data-i18n="approach.s1.title">Real Needs</h3>
+            <p data-i18n="approach.s1.text">Understand the problems and demands of agriculture, crop by crop and market by market.</p>
           </li>
           <li class="step">
             <span class="step-num">02</span>
             <h3>Market Fit</h3>
-            <p>Identify gaps and opportunities where current solutions don't respond well enough.</p>
+            <p data-i18n="approach.s2.text">Identify gaps and opportunities where current solutions don't respond well enough.</p>
           </li>
           <li class="step">
             <span class="step-num">03</span>
             <h3>Technology Scouting</h3>
-            <p>From Europe, search worldwide for <span class="nowrap">Ag-Biotech</span> technologies capable of solving those problems.</p>
+            <p data-i18n="approach.s3.text">From Europe, search worldwide for <span class="nowrap">Ag-Biotech</span> technologies capable of solving those problems.</p>
           </li>
           <li class="step">
             <span class="step-num">04</span>
-            <h3>Validation</h3>
-            <p>Assess differentiation, applicability, scalability and potential for local adaptation.</p>
+            <h3 data-i18n="approach.s4.title">Validation</h3>
+            <p data-i18n="approach.s4.text">Assess differentiation, applicability, scalability and potential for local adaptation.</p>
           </li>
           <li class="step">
             <span class="step-num">05</span>
             <h3>Market Development</h3>
-            <p>Help turn the opportunity into a viable commercial solution.</p>
+            <p data-i18n="approach.s5.text">Help turn the opportunity into a viable commercial solution.</p>
           </li>
         </ol>
       </div>
@@ -220,38 +224,38 @@
     <section class="section section-tint" id="what-we-look-for">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">04 — What we look for</p>
-          <h2>Technologies with real fit and the potential to scale.</h2>
-          <p class="lede">It isn't about adding products. We look for differentiated solutions to relevant problems.</p>
+          <p class="kicker" data-i18n="look.kicker">04 — What we look for</p>
+          <h2 data-i18n="look.title">Technologies with real fit and the potential to scale.</h2>
+          <p class="lede" data-i18n="look.lede">It isn't about adding products. We look for differentiated solutions to relevant problems.</p>
         </div>
 
         <div class="criteria">
           <article class="criterion">
             <svg class="criterion-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 28V14m0 0c0-5 3.5-9 9-9 0 5-3.5 9-9 9zm0 4c0-4-3-7-7.5-7 0 4 3 7 7.5 7z"/></svg>
-            <h3>Agronomic value</h3>
-            <p>Consistent efficacy, measurable benefit and adaptation to real production conditions.</p>
+            <h3 data-i18n="look.c1.title">Agronomic value</h3>
+            <p data-i18n="look.c1.text">Consistent efficacy, measurable benefit and adaptation to real production conditions.</p>
           </article>
           <article class="criterion">
             <svg class="criterion-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11"/><circle cx="16" cy="16" r="5.5"/><circle cx="16" cy="16" r="1.2"/></svg>
-            <h3>Differentiation</h3>
-            <p>A concrete gap: a poorly solved need, a limitation in today's offer or an emerging opportunity.</p>
+            <h3 data-i18n="look.c2.title">Differentiation</h3>
+            <p data-i18n="look.c2.text">A concrete gap: a poorly solved need, a limitation in today's offer or an emerging opportunity.</p>
           </article>
           <article class="criterion">
             <svg class="criterion-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 26h22M8 26V17m6 9V12m6 14V8m6 18V4"/></svg>
-            <h3>Business viability</h3>
-            <p>Scalable manufacturing, a clear regulatory route, a reliable partner and a reasonable time to market.</p>
+            <h3 data-i18n="look.c3.title">Business viability</h3>
+            <p data-i18n="look.c3.text">Scalable manufacturing, a clear regulatory route, a reliable partner and a reasonable time to market.</p>
           </article>
         </div>
 
         <div class="filters">
-          <p class="filters-label">Selection filters</p>
+          <p class="filters-label" data-i18n="look.filters">Selection filters</p>
           <ol class="filters-chain">
-            <li>Real need</li>
-            <li>Technological edge</li>
-            <li>Evidence</li>
-            <li>Scalability</li>
-            <li>Regulation</li>
-            <li>Market</li>
+            <li data-i18n="look.f1">Real need</li>
+            <li data-i18n="look.f2">Technological edge</li>
+            <li data-i18n="look.f3">Evidence</li>
+            <li data-i18n="look.f4">Scalability</li>
+            <li data-i18n="look.f5">Regulation</li>
+            <li data-i18n="look.f6">Market</li>
           </ol>
         </div>
       </div>
@@ -261,30 +265,30 @@
     <section class="section section-dark" id="how-we-think">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">05 — How we think</p>
-          <h2>Innovation only matters when it makes technical, commercial and economic sense.</h2>
+          <p class="kicker" data-i18n="think.kicker">05 — How we think</p>
+          <h2 data-i18n="think.title">Innovation only matters when it makes technical, commercial and economic sense.</h2>
         </div>
 
         <ul class="attributes">
           <li>
-            <h3>Global vision</h3>
-            <p>We look for technologies and solutions beyond traditional markets.</p>
+            <h3 data-i18n="think.a1.title">Global vision</h3>
+            <p data-i18n="think.a1.text">We look for technologies and solutions beyond traditional markets.</p>
           </li>
           <li>
-            <h3>Agronomic knowledge</h3>
-            <p>We understand crops, production problems and real market conditions.</p>
+            <h3 data-i18n="think.a2.title">Agronomic knowledge</h3>
+            <p data-i18n="think.a2.text">We understand crops, production problems and real market conditions.</p>
           </li>
           <li>
-            <h3>Strategic thinking</h3>
-            <p>We spot opportunities where existing solutions fall short.</p>
+            <h3 data-i18n="think.a3.title">Strategic thinking</h3>
+            <p data-i18n="think.a3.text">We spot opportunities where existing solutions fall short.</p>
           </li>
           <li>
-            <h3>Results orientation</h3>
-            <p>A technology must be more than innovative — it has to work in the field and in the business.</p>
+            <h3 data-i18n="think.a4.title">Results orientation</h3>
+            <p data-i18n="think.a4.text">A technology must be more than innovative — it has to work in the field and in the business.</p>
           </li>
           <li>
-            <h3>Innovation meets market</h3>
-            <p>We turn technological capabilities into concrete commercial opportunities.</p>
+            <h3 data-i18n="think.a5.title">Innovation meets market</h3>
+            <p data-i18n="think.a5.text">We turn technological capabilities into concrete commercial opportunities.</p>
           </li>
         </ul>
       </div>
@@ -294,17 +298,17 @@
     <section class="section" id="contact">
       <div class="container contact">
         <div class="contact-text">
-          <p class="kicker">06 — Let's talk</p>
-          <h2>Have a technology, a need or an idea worth exploring?</h2>
-          <p class="lede">We'd like to hear from <span class="nowrap">Ag-Biotech</span> companies, agricultural technology developers, manufacturers and partners across the agricultural value chain — in Europe and Latin America.</p>
+          <p class="kicker" data-i18n="contact.kicker">06 — Let's talk</p>
+          <h2 data-i18n="contact.title">Have a technology, a need or an idea worth exploring?</h2>
+          <p class="lede" data-i18n="contact.lede">We'd like to hear from <span class="nowrap">Ag-Biotech</span> companies, agricultural technology developers, manufacturers and partners across the agricultural value chain — in Europe and Latin America.</p>
         </div>
         <div class="contact-card">
           <div class="contact-line is-static">
-            <span class="contact-label">Phone</span>
+            <span class="contact-label" data-i18n="contact.phone">Phone</span>
             <a class="phone" href="tel:+34600623040">
               <svg class="flag" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#AA151B"/><rect y="4" width="24" height="8" fill="#F1BF00"/></svg>
               <span class="contact-value">+34 600 62 30 40</span>
-              <span class="sr-only">(Spain)</span>
+              <span class="sr-only" data-i18n="contact.spain">(Spain)</span>
             </a>
             <a class="phone" href="tel:+5493512142514">
               <svg class="flag" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#74ACDF"/><rect y="5.33" width="24" height="5.34" fill="#fff"/><circle cx="12" cy="8" r="1.7" fill="#F6B40E"/></svg>
@@ -312,20 +316,11 @@
               <span class="sr-only">(Argentina)</span>
             </a>
           </div>
-          <!-- TODO: replace with the final corporate email and LinkedIn URL -->
-          <a class="contact-line" href="mailto:contact@sbi-nexus.com">
-            <span class="contact-label">Email</span>
-            <span class="contact-value">contact@sbi-nexus.com</span>
+          <a class="contact-line" href="mailto:gabriel@sbi-nexus.com">
+            <span class="contact-label" data-i18n="contact.email">Email</span>
+            <span class="contact-value">gabriel@sbi-nexus.com</span>
           </a>
-          <a class="contact-line" href="https://www.linkedin.com/" target="_blank" rel="noopener">
-            <span class="contact-label">LinkedIn</span>
-            <span class="contact-value">SBI</span>
-          </a>
-          <div class="contact-line is-static">
-            <span class="contact-label">Presence</span>
-            <span class="contact-value">Europe · Latin America</span>
-          </div>
-          <a class="btn btn-primary btn-block" href="mailto:contact@sbi-nexus.com?subject=Hello%20SBI">Write to us</a>
+          <a class="btn btn-primary btn-block" href="mailto:gabriel@sbi-nexus.com?subject=SBI" data-i18n="contact.button">Write to us</a>
         </div>
       </div>
     </section>
@@ -337,13 +332,14 @@
     <div class="container footer-inner">
       <div>
         <span class="brand-mark brand-mark-sm">SBI</span>
-        <p class="footer-name">Global Technology. Local Intelligence. Regional Growth.</p>
+        <p class="footer-name" data-i18n="footer.tagline">Global Technology. Local Intelligence. Regional Growth.</p>
       </div>
-      <p class="footer-values">Market Intelligence · Technology Scouting · Market Development</p>
-      <p class="footer-copy">© <span id="year">2026</span> SBI. All rights reserved.</p>
+      <p class="footer-values" data-i18n="footer.values">Market Intelligence · Technology Scouting · Market Development</p>
+      <p class="footer-copy">© <span id="year">2026</span> SBI. <span data-i18n="footer.rights">All rights reserved.</span></p>
     </div>
   </footer>
 
-  <script src="main.js?v=6" defer></script>
+  <script src="i18n.js?v=7"></script>
+  <script src="main.js?v=7" defer></script>
 </body>
 </html>

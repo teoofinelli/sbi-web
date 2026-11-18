@@ -83,7 +83,8 @@ p { margin: 0; }
   -webkit-backdrop-filter: saturate(160%) blur(10px);
   box-shadow: 0 1px 0 rgba(15, 35, 67, .08);
 }
-.header-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; }
+.header-inner { height: 100%; display: flex; align-items: center; gap: 22px; }
+.brand { margin-right: auto; }
 
 .brand { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; }
 .brand-mark {
@@ -454,4 +455,21 @@ a.contact-line:hover .contact-value { color: var(--green); }
   .about { grid-template-columns: 1fr; gap: 0; }
   .about-body { padding-top: 22px; }
   .facts { grid-template-columns: 1fr; }
+}
+
+/* ---------- Language switch ---------- */
+.lang-switch {
+  display: inline-flex; padding: 3px; border-radius: 999px;
+  background: rgba(15, 35, 67, .07);
+}
+.lang-switch button {
+  border: 0; background: transparent; cursor: pointer;
+  padding: 6px 11px; border-radius: 999px;
+  font: 700 12.5px/1 var(--font-display); letter-spacing: .06em; color: var(--slate);
+  transition: background .2s, color .2s;
+}
+.lang-switch button:hover { color: var(--navy); }
+.lang-switch button[aria-pressed="true"] { background: var(--white); color: var(--navy); box-shadow: 0 1px 3px rgba(15, 35, 67, .15); }
+@media (max-width: 860px) {
+  .header-inner { gap: 10px; }
 }
