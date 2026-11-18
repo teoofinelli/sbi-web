@@ -12,7 +12,7 @@
     "nav.lookfor": "Qué buscamos",
     "nav.think": "Cómo pensamos",
     "nav.contact": "Contacto",
-    "hero.eyebrow": "<span class=\"nowrap\">Ag Bio Tech</span> · Del mundo a <span class=\"nowrap\">Latinoamérica</span>",
+    "hero.eyebrow": "<span class=\"nowrap\">Ag-Biotech</span> · Del mundo a <span class=\"nowrap\">Latinoamérica</span>",
     "hero.tagline": "<span class=\"nowrap\">Tecnología global.</span> <span class=\"nowrap accent\">Inteligencia local.</span> <span class=\"nowrap\">Crecimiento regional.</span>",
     "hero.slide1": "Conectamos la innovación agrícola global con oportunidades reales de mercado.",
     "hero.slide2": "Desde Europa, buscamos en todo el mundo soluciones <span class=\"nowrap\">Ag-Biotech</span> que cierren las brechas que las opciones actuales dejan abiertas.",
