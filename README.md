@@ -13,7 +13,7 @@ Sitio estático (HTML + CSS + JS, sin dependencias ni build). Abrir `index.html`
 - **Textos:** el inglés se edita en `index.html` y el español en `i18n.js`.
 - **Velocidad del slider:** atributo `data-interval` en `index.html` (milisegundos). Las fotos tienen su propio `data-interval` en `.hero-media`.
 - **Fotos de portada:** usar fotos verticales de unos 1000 px de ancho y menos de 400 KB. Para agregar una, sumar otro `<img>` dentro de `.hero-media`. Con `style="--focus: center 60%"` se elige qué parte de la foto se ve.
-- **Contacto:** el email (`gabriel@sbi-nexus.com`) aparece 2 veces en `index.html`.
+- **Contacto:** teléfonos y email (`contact@sbi-nexus.com`) están en la tarjeta de contacto de `index.html`.
 - **Analítica:** pegar el snippet donde indica el comentario en `<head>`.
 
 ## Pendiente antes de publicar

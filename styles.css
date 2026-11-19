@@ -473,3 +473,17 @@ a.contact-line:hover .contact-value { color: var(--green); }
 @media (max-width: 860px) {
   .header-inner { gap: 10px; }
 }
+
+/* ---------- Contact card ---------- */
+.contact-card { padding: 28px; }
+.contact-card-title {
+  font-size: 24px; font-weight: 800; letter-spacing: -0.02em;
+  padding-bottom: 16px; margin-bottom: 4px; border-bottom: 2px solid var(--navy);
+}
+.contact-item {
+  display: flex; align-items: center; gap: 14px; padding: 16px 0;
+  border-bottom: 1px solid var(--mist); text-decoration: none;
+}
+.contact-item:last-child { border-bottom: 0; padding-bottom: 0; }
+.contact-item:hover .contact-value { color: var(--green); }
+.contact-icon { width: 24px; height: 16px; flex: none; fill: none; stroke: var(--green); stroke-width: 1.6; stroke-linejoin: round; }
