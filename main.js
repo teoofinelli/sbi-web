@@ -64,7 +64,8 @@
     pauseBtn.addEventListener("click", () => {
       userPaused = !userPaused;
       pauseBtn.dataset.paused = String(userPaused);
-      pauseBtn.setAttribute("aria-label", userPaused ? "Play rotation" : "Pause rotation");
+      const es = document.documentElement.lang === "es";
+      pauseBtn.setAttribute("aria-label", userPaused ? (es ? "Reanudar rotación" : "Play rotation") : (es ? "Pausar rotación" : "Pause rotation"));
       start();
     });
     pauseBtn.dataset.paused = String(userPaused);

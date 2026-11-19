@@ -23,17 +23,17 @@
     "hero.cta1": "Ver nuestro enfoque",
     "hero.cta2": "Iniciar una conversación",
     "who.kicker": "01 — Quiénes somos",
-    "who.title": "Ingenieros agrónomos y especialistas en agronegocios con más de 25 años en Latinoamérica.",
-    "who.p1": "Somos un equipo de ingenieros agrónomos y profesionales especializados en agronegocios, desarrollo de mercados y lanzamiento de tecnologías, con más de 25 años de experiencia en Latinoamérica.",
+    "who.title": "Ingenieros agrónomos y especialistas en agronegocios con más de 25 años de experiencia profesional en Latinoamérica.",
+    "who.p1": "SBI reúne más de 25 años de experiencia profesional en agronegocios, desarrollo de mercados y tecnologías agrícolas en Latinoamérica.",
     "who.p2": "Combinamos conocimiento agronómico, visión estratégica y experiencia comercial para conectar la innovación global con las necesidades reales de la agricultura latinoamericana.",
     "who.p3": "Contamos con presencia en Europa y una sólida red de conocimiento, relaciones y capacidades locales en los principales mercados de Latinoamérica. Esta estructura nos permite integrar una perspectiva global con un profundo entendimiento de cada mercado y de sus particularidades productivas, comerciales y regulatorias.",
-    "who.fact1": "años de experiencia en la agricultura latinoamericana",
+    "who.fact1": "años de experiencia profesional en agronegocios en Latinoamérica",
     "who.fact2v": "Global",
     "who.fact2": "una visión mundial para el scouting de innovación <span class=\"nowrap\">Ag-Biotech</span>",
     "who.fact3": "una red local en los principales mercados de la región",
     "who.statement": "Conectamos conocimiento, tecnología y mercado <strong>para transformar oportunidades de innovación en soluciones con impacto y crecimiento sostenible para la agricultura latinoamericana.</strong>",
     "what.kicker": "02 — Qué hacemos",
-    "what.title": "Con una visión global, buscamos el <span class=\"nowrap\">Ag-Biotech</span> que necesita la agricultura latinoamericana.",
+    "what.title": "Con una visión global, identificamos tecnologías <span class=\"nowrap\">Ag-Biotech</span> en todo el mundo para responder a las necesidades de la agricultura latinoamericana.",
     "what.lede": "Identificamos oportunidades donde la innovación tecnológica pueda generar un diferencial real. Exploramos soluciones a escala global, evaluamos su potencial agronómico y comercial, y articulamos las capacidades técnicas, regulatorias y operativas necesarias para facilitar su adaptación, validación y desarrollo en los mercados regionales.",
     "what.a.title": "Partimos del problema",
     "what.a.text": "Identificamos necesidades reales, las limitaciones de las soluciones actuales y las oportunidades que se abren para productores y cadenas agroalimentarias.",
@@ -41,7 +41,7 @@
     "what.b.text": "Con una visión global, buscamos en todo el mundo tecnologías <span class=\"nowrap\">Ag-Biotech</span>, innovaciones y socios que respondan a esas necesidades.",
     "what.c.title": "La llevamos al mercado",
     "what.c.text": "Evaluamos encaje local, evidencia, escalabilidad, regulación y tiempo de llegada al mercado, y ayudamos a construir el camino hacia la entrada comercial.",
-    "what.statement": "No somos distribuidores ni un catálogo. <strong>Primero identificamos dónde está la brecha y después la tecnología que necesita.</strong>",
+    "what.statement": "No somos un distribuidor tradicional ni trabajamos a partir de un catálogo de productos. <strong>Primero identificamos la oportunidad y después buscamos la tecnología adecuada.</strong>",
     "approach.kicker": "03 — Nuestro enfoque",
     "approach.title": "Empezamos por el problema, no por un producto que vender.",
     "approach.lede": "Cinco etapas llevan una oportunidad desde una necesidad real en el campo hasta una solución comercial viable.",
@@ -85,6 +85,9 @@
     "contact.lede": "Queremos conversar con empresas <span class=\"nowrap\">Ag-Biotech</span>, desarrolladores de tecnologías agrícolas, fabricantes y socios de toda la cadena de valor agrícola, en Europa y Latinoamérica.",
     "contact.cardTitle": "Contáctanos",
     "contact.spain": "(España)",
+    "aria.menu": "Menú",
+    "aria.slider": "Qué hace SBI",
+    "aria.tabs": "Elegir un mensaje",
     "footer.tagline": "Tecnología global. Inteligencia local. Crecimiento regional.",
     "footer.values": "Inteligencia de mercado · Scouting tecnológico · Desarrollo de mercado",
     "footer.rights": "Todos los derechos reservados.",
@@ -95,8 +98,10 @@
 
   const STORAGE_KEY = "sbi-lang";
   const nodes = document.querySelectorAll("[data-i18n]");
+  const ariaNodes = document.querySelectorAll("[data-i18n-aria]");
   const EN = {};
   nodes.forEach((el) => { EN[el.dataset.i18n] = el.innerHTML; });
+  ariaNodes.forEach((el) => { EN[el.dataset.i18nAria] = el.getAttribute("aria-label"); });
   EN["meta.title"] = document.title;
   const metaDesc = document.querySelector('meta[name="description"]');
   EN["meta.description"] = metaDesc ? metaDesc.content : "";
@@ -109,6 +114,10 @@
     nodes.forEach((el) => {
       const text = dict[el.dataset.i18n];
       if (text !== undefined) el.innerHTML = text;
+    });
+    ariaNodes.forEach((el) => {
+      const text = dict[el.dataset.i18nAria];
+      if (text !== undefined) el.setAttribute("aria-label", text);
     });
     document.title = dict["meta.title"];
     if (metaDesc) metaDesc.content = dict["meta.description"];

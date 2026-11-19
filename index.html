@@ -11,7 +11,11 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="SBI — Global Technology. Local Intelligence. Regional Growth.">
   <meta property="og:description" content="Connecting global agricultural innovation with real market opportunities.">
-  <meta property="og:image" content="assets/hero-1-soy.jpg">
+  <meta property="og:url" content="https://teoofinelli.github.io/sbi-web/">
+  <meta property="og:image" content="https://teoofinelli.github.io/sbi-web/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +47,7 @@
         <button type="button" data-lang="es" aria-pressed="false">ES</button>
       </div>
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
-        <span class="sr-only">Menu</span>
+        <span class="sr-only" data-i18n="aria.menu">Menu</span>
         <span class="nav-toggle-bar"></span>
       </button>
     </div>
@@ -61,7 +65,7 @@
           <p class="hero-tagline" data-i18n="hero.tagline"><span class="nowrap">Global Technology.</span> <span class="nowrap accent">Local Intelligence.</span> <span class="nowrap">Regional Growth.</span></p>
 
           <!-- Rotating messages. The first slide works on its own if the visitor never waits for the rotation. -->
-          <div class="slider" data-interval="6500" aria-roledescription="carousel" aria-label="What SBI does">
+          <div class="slider" data-interval="6500" aria-roledescription="carousel" aria-label="What SBI does" data-i18n-aria="aria.slider">
             <div class="slides" aria-live="polite">
               <div class="slide is-active" data-index="0" role="group" aria-roledescription="slide" aria-label="1 of 3">
                 <p class="slide-lead" data-i18n="hero.slide1">Connecting global agricultural innovation with real market opportunities.</p>
@@ -75,7 +79,7 @@
             </div>
 
             <div class="slider-controls">
-              <div class="slider-tabs" role="tablist" aria-label="Choose a message">
+              <div class="slider-tabs" role="tablist" aria-label="Choose a message" data-i18n-aria="aria.tabs">
                 <button class="slider-tab is-active" role="tab" aria-selected="true" data-go="0" data-i18n="hero.tab1"><span class="tab-num">01</span> Market intelligence<span class="tab-progress"></span></button>
                 <button class="slider-tab" role="tab" aria-selected="false" data-go="1" data-i18n="hero.tab2"><span class="tab-num">02</span> Technology scouting<span class="tab-progress"></span></button>
                 <button class="slider-tab" role="tab" aria-selected="false" data-go="2" data-i18n="hero.tab3"><span class="tab-num">03</span> Market development<span class="tab-progress"></span></button>
@@ -118,10 +122,10 @@
         <div class="about">
           <div class="section-head about-head">
             <p class="kicker" data-i18n="who.kicker">01 — Who we are</p>
-            <h2 data-i18n="who.title">Agronomists and agribusiness specialists with 25+ years in Latin America.</h2>
+            <h2 data-i18n="who.title">Agronomists and agribusiness specialists with over 25 years of professional experience in Latin America.</h2>
           </div>
           <div class="about-body">
-            <p data-i18n="who.p1">We are a team of agronomists and professionals specialised in agribusiness, market development and technology launches, with more than 25 years of experience in Latin America.</p>
+            <p data-i18n="who.p1">SBI brings together over 25 years of professional experience in Latin American agribusiness, market development and agricultural technologies.</p>
             <p data-i18n="who.p2">We combine agronomic knowledge, strategic vision and commercial experience to connect global innovation with the real needs of Latin American agriculture.</p>
             <p data-i18n="who.p3">With a presence in Europe and a solid network of knowledge, relationships and local capabilities in Latin America's main markets, we bring together a global perspective and a deep understanding of each market — its production, commercial and regulatory particularities.</p>
           </div>
@@ -130,7 +134,7 @@
         <ul class="facts">
           <li>
             <span class="fact-value">25+</span>
-            <span class="fact-label" data-i18n="who.fact1">years of experience in Latin American agriculture</span>
+            <span class="fact-label" data-i18n="who.fact1">years of professional experience in Latin American agribusiness</span>
           </li>
           <li>
             <span class="fact-value" data-i18n="who.fact2v">Global</span>
@@ -153,7 +157,7 @@
       <div class="container">
         <div class="section-head">
           <p class="kicker" data-i18n="what.kicker">02 — What we do</p>
-          <h2 data-i18n="what.title">With a global vision, we scout the <span class="nowrap">Ag-Biotech</span> that Latin American agriculture needs.</h2>
+          <h2 data-i18n="what.title">With a global vision, we scout <span class="nowrap">Ag-Biotech</span> technologies worldwide to address Latin America's agricultural needs.</h2>
           <p class="lede" data-i18n="what.lede">We identify opportunities where technological innovation can make a real difference. We explore solutions globally, assess their agronomic and commercial potential, and bring together the technical, regulatory and operational capabilities needed to adapt, validate and develop them in regional markets.</p>
         </div>
 
@@ -176,7 +180,7 @@
         </div>
 
         <blockquote class="statement">
-          <p data-i18n="what.statement">We are not a distributor or a catalogue. <strong>We first find where the gap is — then the technology it needs.</strong></p>
+          <p data-i18n="what.statement">We are not a traditional distributor, nor do we work from a product catalogue. <strong>We identify the opportunity first, then find the right technology.</strong></p>
         </blockquote>
       </div>
     </section>
@@ -336,7 +340,7 @@
     </div>
   </footer>
 
-  <script src="i18n.js?v=10"></script>
-  <script src="main.js?v=7" defer></script>
+  <script src="i18n.js?v=11"></script>
+  <script src="main.js?v=8" defer></script>
 </body>
 </html>
