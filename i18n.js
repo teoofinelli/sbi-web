@@ -15,7 +15,7 @@
     "hero.eyebrow": "<span class=\"nowrap\">Ag-Biotech</span> · Del mundo a <span class=\"nowrap\">Latinoamérica</span>",
     "hero.tagline": "<span class=\"nowrap\">Tecnología global.</span> <span class=\"nowrap accent\">Inteligencia local.</span> <span class=\"nowrap\">Crecimiento regional.</span>",
     "hero.slide1": "Conectamos la innovación agrícola global con oportunidades reales de mercado.",
-    "hero.slide2": "Desde Europa, buscamos en todo el mundo soluciones <span class=\"nowrap\">Ag-Biotech</span> que cierren las brechas que las opciones actuales dejan abiertas.",
+    "hero.slide2": "Con una visión global, buscamos soluciones <span class=\"nowrap\">Ag-Biotech</span> que cierren las brechas que las opciones actuales dejan abiertas.",
     "hero.slide3": "Transformamos la innovación en negocios viables y crecimiento sostenible en toda Latinoamérica.",
     "hero.tab1": "<span class=\"tab-num\">01</span> Inteligencia de mercado<span class=\"tab-progress\"></span>",
     "hero.tab2": "<span class=\"tab-num\">02</span> Scouting tecnológico<span class=\"tab-progress\"></span>",
@@ -28,17 +28,17 @@
     "who.p2": "Combinamos conocimiento agronómico, visión estratégica y experiencia comercial para conectar la innovación global con las necesidades reales de la agricultura latinoamericana.",
     "who.p3": "Contamos con presencia en Europa y una sólida red de conocimiento, relaciones y capacidades locales en los principales mercados de Latinoamérica. Esta estructura nos permite integrar una perspectiva global con un profundo entendimiento de cada mercado y de sus particularidades productivas, comerciales y regulatorias.",
     "who.fact1": "años de experiencia en la agricultura latinoamericana",
-    "who.fact2v": "Europa",
-    "who.fact2": "nuestra base para el scouting de innovación <span class=\"nowrap\">Ag-Biotech</span>",
+    "who.fact2v": "Global",
+    "who.fact2": "una visión mundial para el scouting de innovación <span class=\"nowrap\">Ag-Biotech</span>",
     "who.fact3": "una red local en los principales mercados de la región",
     "who.statement": "Conectamos conocimiento, tecnología y mercado <strong>para transformar oportunidades de innovación en soluciones con impacto y crecimiento sostenible para la agricultura latinoamericana.</strong>",
     "what.kicker": "02 — Qué hacemos",
-    "what.title": "Desde Europa, buscamos el <span class=\"nowrap\">Ag-Biotech</span> que necesita la agricultura latinoamericana.",
+    "what.title": "Con una visión global, buscamos el <span class=\"nowrap\">Ag-Biotech</span> que necesita la agricultura latinoamericana.",
     "what.lede": "Identificamos oportunidades donde la innovación tecnológica pueda generar un diferencial real. Exploramos soluciones a escala global, evaluamos su potencial agronómico y comercial, y articulamos las capacidades técnicas, regulatorias y operativas necesarias para facilitar su adaptación, validación y desarrollo en los mercados regionales.",
     "what.a.title": "Partimos del problema",
     "what.a.text": "Identificamos necesidades reales, las limitaciones de las soluciones actuales y las oportunidades que se abren para productores y cadenas agroalimentarias.",
     "what.b.title": "Encontramos la tecnología",
-    "what.b.text": "Desde nuestra base en Europa, buscamos en todo el mundo tecnologías <span class=\"nowrap\">Ag-Biotech</span>, innovaciones y socios que respondan a esas necesidades.",
+    "what.b.text": "Con una visión global, buscamos en todo el mundo tecnologías <span class=\"nowrap\">Ag-Biotech</span>, innovaciones y socios que respondan a esas necesidades.",
     "what.c.title": "La llevamos al mercado",
     "what.c.text": "Evaluamos encaje local, evidencia, escalabilidad, regulación y tiempo de llegada al mercado, y ayudamos a construir el camino hacia la entrada comercial.",
     "what.statement": "No somos distribuidores ni un catálogo. <strong>Primero identificamos dónde está la brecha y después la tecnología que necesita.</strong>",
@@ -48,7 +48,7 @@
     "approach.s1.title": "Necesidades reales",
     "approach.s1.text": "Comprender los problemas y las demandas de la agricultura, cultivo por cultivo y mercado por mercado.",
     "approach.s2.text": "Identificar brechas y oportunidades donde las soluciones actuales no responden lo suficiente.",
-    "approach.s3.text": "Desde Europa, buscar en todo el mundo tecnologías <span class=\"nowrap\">Ag-Biotech</span> capaces de resolver esos problemas.",
+    "approach.s3.text": "Con una visión global, buscar en todo el mundo tecnologías <span class=\"nowrap\">Ag-Biotech</span> capaces de resolver esos problemas.",
     "approach.s4.title": "Validación",
     "approach.s4.text": "Evaluar su diferencial, aplicabilidad, escalabilidad y potencial de adaptación local.",
     "approach.s5.text": "Ayudar a transformar la oportunidad en una solución comercial viable.",
@@ -89,7 +89,7 @@
     "footer.values": "Inteligencia de mercado · Scouting tecnológico · Desarrollo de mercado",
     "footer.rights": "Todos los derechos reservados.",
     "meta.title": "SBI — Tecnología global. Inteligencia local. Crecimiento regional.",
-    "meta.description": "SBI busca innovación Ag-Biotech desde Europa y la conecta con oportunidades reales de mercado en la agricultura latinoamericana: inteligencia de mercado, scouting tecnológico y desarrollo de mercado."
+    "meta.description": "Con una visión global, SBI busca innovación Ag-Biotech y la conecta con oportunidades reales de mercado en la agricultura latinoamericana: inteligencia de mercado, scouting tecnológico y desarrollo de mercado."
   };
   /* ES:end */
 
