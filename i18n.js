@@ -15,7 +15,7 @@
     "hero.eyebrow": "<span class=\"nowrap\">Ag-Biotech</span> · Del mundo a <span class=\"nowrap\">Latinoamérica</span>",
     "hero.tagline": "<span class=\"nowrap\">Tecnología global.</span> <span class=\"nowrap accent\">Inteligencia local.</span> <span class=\"nowrap\">Crecimiento regional.</span>",
     "hero.slide1": "Conectamos la innovación agrícola global con oportunidades reales de mercado.",
-    "hero.slide2": "Con una visión global, buscamos soluciones <span class=\"nowrap\">Ag-Biotech</span> que cierren las brechas que las opciones actuales dejan abiertas.",
+    "hero.slide2": "Con una visión global, buscamos soluciones <span class=\"nowrap\">Ag-Biotech</span> que aporten un valor diferencial significativo al agricultor.",
     "hero.slide3": "Transformamos la innovación en negocios viables y crecimiento sostenible en toda Latinoamérica.",
     "hero.tab1": "<span class=\"tab-num\">01</span> Inteligencia de mercado<span class=\"tab-progress\"></span>",
     "hero.tab2": "<span class=\"tab-num\">02</span> Scouting tecnológico<span class=\"tab-progress\"></span>",
