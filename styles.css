@@ -94,7 +94,8 @@ p { margin: 0; }
 .brand-mark-sm { font-size: 22px; }
 .brand-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); margin-top: 10px; }
 
-.site-nav { display: flex; align-items: center; gap: 30px; }
+.site-nav { display: flex; align-items: center; gap: clamp(18px, 2.2vw, 30px); }
+.site-nav a { white-space: nowrap; }
 .site-nav a {
   text-decoration: none; font-size: 15px; font-weight: 500; color: var(--ink);
   transition: color .2s;
@@ -387,8 +388,8 @@ a.contact-line:hover .contact-value { color: var(--green); }
   .attributes li, .attributes li + li { padding: 24px 24px 24px 0; border-left: 0; border-top: 1px solid rgba(255, 255, 255, .16); }
 }
 
-@media (max-width: 860px) {
-  :root { --header-h: 64px; }
+/* the full menu (longer in Spanish) needs about 1120px; below that it folds into the menu button */
+@media (max-width: 1120px) {
   .nav-toggle { display: block; }
   .site-nav {
     position: fixed; top: var(--header-h); left: 0; right: 0;
@@ -402,7 +403,10 @@ a.contact-line:hover .contact-value { color: var(--green); }
   .site-header:has(.site-nav.is-open) { background: var(--paper); }
   .site-nav a { padding: 14px 0; border-bottom: 1px solid var(--mist); font-size: 17px; }
   .site-nav .nav-cta { margin-top: 16px; text-align: center; border-bottom: 0; }
+}
 
+@media (max-width: 860px) {
+  :root { --header-h: 64px; }
   .hero { grid-template-columns: 1fr; min-height: 0; }
   .hero-media { order: -1; height: 300px; margin-top: var(--header-h); }
   .hero-media::before { inset: auto 0 0 0; width: auto; height: 12%;

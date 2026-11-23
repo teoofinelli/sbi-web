@@ -17,7 +17,11 @@ Sitio estático (HTML + CSS + JS, sin dependencias ni build). Abrir `index.html`
 - **Analítica:** pegar el snippet donde indica el comentario en `<head>`.
 
 ## Pendiente antes de publicar
-Dominio principal · logo final · aviso de privacidad si se recopilan datos.
+Logo final · aviso de privacidad si se recopilan datos.
 
 ## Publicar
-Cualquier hosting estático con SSL sirve (Netlify, Vercel, Cloudflare Pages o GitHub Pages): subir la carpeta `web/` y apuntar el dominio.
+La web está en GitHub Pages (repo `teoofinelli/sbi-web`, rama `main`) con el dominio **sbi-nexus.com** (archivo `CNAME`). Cada push a `main` se publica solo en 1–2 minutos.
+
+DNS en GoDaddy: 4 registros A de `@` → `185.199.108.153`, `.109.153`, `.110.153`, `.111.153`, y CNAME `www` → `teoofinelli.github.io`. Los registros MX, TXT y los CNAME de Microsoft son del correo: no tocarlos.
+
+Al cambiar CSS o JS, subir el número `?v=` en `index.html` para que los visitantes no vean la versión guardada en caché.
